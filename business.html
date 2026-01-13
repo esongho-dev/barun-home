@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사업분야 | 바른플러스</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand { font-weight: bold; color: #0046ff !important; }
+        .page-header { background-color: #0046ff; color: white; padding: 80px 0; }
+        
+        /* 사업 카드 스타일 */
+        .biz-card {
+            border: none;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            height: 100%;
+            overflow: hidden;
+        }
+        .biz-card:hover {
+            transform: translateY(-10px);
+            shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .icon-box {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .biz-list {
+            list-style: none;
+            padding-left: 0;
+            text-align: left;
+        }
+        .biz-list li {
+            padding: 5px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        .biz-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0046ff;
+            font-weight: bold;
+        }
+        .footer { background: #f8f9fa; padding: 40px 0; font-size: 0.9rem; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">바른플러스</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="about.html">회사소개</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="business.html">사업분야</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="service.html">서비스</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="inquiry-corp.html">견적문의</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="inquiry-job.html">구직문의</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="tel:010-8571-6471">전화연결</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header text-center">
+        <div class="container">
+            <h2 class="display-5 fw-bold mb-3">Business Areas</h2>
+            <p class="lead">바른플러스는 전문화된 인력 운영으로 기업의 생산성을 극대화합니다.</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card biz-card shadow-sm p-4 border-top border-primary border-4">
+                        <div class="icon-box text-center">🏗️</div>
+                        <h4 class="fw-bold text-center mb-4">제조 / 생산</h4>
+                        <ul class="biz-list text-muted">
+                            <li>제품 조립 및 생산 라인</li>
+                            <li>품질 검사 및 QC</li>
+                            <li>포장 및 출하 관리</li>
+                            <li>현장 리더(반장) 파견</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card biz-card shadow-sm p-4 border-top border-primary border-4">
+                        <div class="icon-box text-center">📦</div>
+                        <h4 class="fw-bold text-center mb-4">물류 / 유통</h4>
+                        <ul class="biz-list text-muted">
+                            <li>상하차 및 분류 업무</li>
+                            <li>피킹 / 패킹 서비스</li>
+                            <li>재고 및 입출고 관리</li>
+                            <li>센터 운영 대행</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card biz-card shadow-sm p-4 border-top border-primary border-4">
+                        <div class="icon-box text-center">🧹</div>
+                        <h4 class="fw-bold text-center mb-4">시설 / 미화</h4>
+                        <ul class="biz-list text-muted">
+                            <li>공장 및 빌딩 정기 청소</li>
+                            <li>사무 공간 방역/미화</li>
+                            <li>시설물 유지 보수</li>
+                            <li>보안 및 주차 관리</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card biz-card shadow-sm p-4 border-top border-primary border-4">
+                        <div class="icon-box text-center">🤝</div>
+                        <h4 class="fw-bold text-center mb-4">채용 / 알바</h4>
+                        <ul class="biz-list text-muted">
+                            <li>단기 프로젝트 인력</li>
+                            <li>성수기 대규모 충원</li>
+                            <li>계약직 채용 대행</li>
+                            <li>사무보조 인력 지원</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light mt-5">
+        <div class="container text-center">
+            <h4 class="fw-bold mb-4">귀사 현장에 가장 필요한 인재, 바른플러스가 찾고 계신 그 답입니다.</h4>
+            <a href="inquiry-corp.html" class="btn btn-primary btn-lg px-5">맞춤형 견적 요청하기</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p><strong>바른플러스</strong> |  본사 : 충남 천안시 서북구 성성동 1001, G1비즈캠퍼스 12층 1222호  |  지사 : 경기도 평택시 송탄로 254, 3층  |</p>
+            <p>Copyright © 2026 Barun Plus. All Rights Reserved.</p>
+            <a href="privacy.html" class="text-decoration-none text-muted me-3">개인정보처리방침</a>
+            <a href="terms.html" class="text-decoration-none text-muted">이용약관</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
