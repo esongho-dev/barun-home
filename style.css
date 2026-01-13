@@ -97,3 +97,15 @@ body {
     border: none;
 }
 
+/* 카카오 지도 강제 가로 꽉 채우기 */
+.root_daum_roughmap, 
+.root_daum_roughmap .wrap_map, 
+.root_daum_roughmap .map {
+    width: 100% !important;
+}
+
+/* 지도 내부의 이미지나 노드들도 부모 너비를 따르도록 설정 */
+.map-container div {
+    width: 100% !important;
+}
+
