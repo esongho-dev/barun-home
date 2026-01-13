@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구직자 상담 문의 | 바른플러스</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand { font-weight: bold; color: #0046ff !important; }
+        .page-header { background: #eefdf5; padding: 60px 0; } /* 구직자는 조금 더 편안한 색감 */
+        
+        .inquiry-card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            background: white;
+            padding: 40px;
+            margin-top: -50px;
+        }
+        .form-label { font-weight: 600; color: #333; }
+        .form-control, .form-select {
+            border-radius: 10px;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+        .form-control:focus {
+            border-color: #28a745; /* 구직자 페이지는 신뢰/안정의 녹색 포인트 */
+            box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.1);
+        }
+        .btn-job {
+            background-color: #28a745;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: white;
+            transition: 0.3s;
+        }
+        .btn-job:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+            color: white;
+        }
+        .job-tip {
+            background: #f8f9fa;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+        }
+        .footer { background: #f8f9fa; padding: 40px 0; font-size: 0.9rem; margin-top: 80px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">바른플러스</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="about.html">회사소개</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="business.html">사업분야</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="service.html">서비스</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="inquiry-corp.html">견적문의</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="inquiry-job.html">구직문의</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="tel:010-8571-6471">전화연결</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-2">구직자 상담 문의</h2>
+            <p class="text-muted">바른플러스는 여러분의 소중한 땀방울과 열정을 응원합니다.</p>
+        </div>
+    </header>
+
+    <section class="container pb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="inquiry-card">
+                    <div class="job-tip mb-5">
+                        <h5 class="fw-bold">빠른 취업을 도와드립니다!</h5>
+                        <p class="small text-muted mb-0">성함과 연락처를 남겨주시면 거주지 인근의 가장 적합한 현장을 매칭하여 오늘 중으로 연락드리겠습니다.</p>
+                    </div>
+
+                    <form action="https://formspree.io/f/mlggewpk" method="POST">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label class="form-label">성함</label>
+                                <input type="text" name="name" class="form-control" placeholder="홍길동" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">연락처</label>
+                                <input type="tel" name="phone" class="form-control" placeholder="010-0000-0000" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">생년월일</label>
+                                <input type="text" name="birth" class="form-control" placeholder="예: 900101" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">거주지역</label>
+                                <input type="text" name="address" class="form-control" placeholder="예: 평택시 고덕동" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">희망 직무</label>
+                                <select name="job_type" class="form-select" required>
+                                    <option value="" selected disabled>직무 선택</option>
+                                    <option value="제조/생산">제조 / 생산</option>
+                                    <option value="물류/분류">물류 / 상하차 / 분류</option>
+                                    <option value="시설/미화">시설관리 / 미화</option>
+                                    <option value="단기알바">단기 아르바이트</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">근무 가능 기간</label>
+                                <select name="duration" class="form-select" required>
+                                    <option value="장기근무">장기 근무 희망</option>
+                                    <option value="6개월이상">6개월 이상</option>
+                                    <option value="3개월이상">3개월 이상</option>
+                                    <option value="단기">1개월 이내 단기</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">경력사항 및 자기소개 (간단히)</label>
+                                <textarea name="experience" class="form-control" rows="4" placeholder="비슷한 업무 경험이 있다면 적어주세요. (예: 물류센터 피킹 3개월)"></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="agree_job" required>
+                                    <label class="form-check-label small" for="agree_job">
+                                        개인정보 수집 및 이용에 동의합니다. (필수)
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn btn-job w-100">상담 신청하고 일자리 찾기</button>
+                                <p class="text-muted small mt-3">신청 즉시 담당자에게 전달되며, 순차적으로 전화를 드립니다.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p><strong>바른플러스</strong> |  본사 : 충남 천안시 서북구 성성동 1001, G1비즈캠퍼스 12층 1222호  |  지사 : 경기도 평택시 송탄로 254, 3층  |</p>
+            <p>Copyright © 2026 Barun Plus. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
