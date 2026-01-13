@@ -1,41 +1,179 @@
-<section class="py-5 bg-light">
-    <div class="container" style="max-width: 700px;">
-        <h2 class="text-center fw-bold mb-4">기업 견적 문의</h2>
-        <div class="card p-4 shadow-sm">
-            <form action="https://formspree.io/f/mlggewpk" method="POST">
-                <div class="mb-3">
-                    <label class="form-label">회사명</label>
-                    <input type="text" name="company_name" class="form-control" required placeholder="회사명을 입력하세요">
-                </div>
-                <div class="mb-3 row">
-                    <div class="col">
-                        <label class="form-label">담당자명</label>
-                        <input type="text" name="name" class="form-control" required>
-                    </div>
-                    <div class="col">
-                        <label class="form-label">연락처</label>
-                        <input type="tel" name="phone" class="form-control" required placeholder="010-0000-0000">
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">서비스 분야</label>
-                    <select name="service_type" class="form-select">
-                        <option value="제조/생산">제조/생산</option>
-                        <option value="물류/유통">물류/유통</option>
-                        <option value="시설관리">시설관리/청소</option>
-                        <option value="기타">기타</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">문의 내용</label>
-                    <textarea name="message" class="form-control" rows="5" required placeholder="필요 인원, 기간 등 상세 내용을 남겨주세요"></textarea>
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="agree" required>
-                    <label class="form-check-label" for="agree">개인정보 수집 및 이용에 동의합니다.</label>
-                </div>
-                <button type="submit" class="btn btn-primary w-100 btn-lg">문의하기 보내기</button>
-            </form>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기업 견적 문의 | 바른플러스</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand { font-weight: bold; color: #0046ff !important; }
+        .page-header { background: #f0f4ff; padding: 60px 0; }
+        
+        /* 폼 스타일 커스텀 */
+        .inquiry-card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            background: white;
+            padding: 40px;
+            margin-top: -50px; /* 헤더와 살짝 겹치게 배치 */
+        }
+        .form-label { font-weight: 600; color: #333; margin-bottom: 8px; }
+        .form-control, .form-select {
+            border-radius: 10px;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #0046ff;
+            box-shadow: 0 0 0 0.25rem rgba(0, 70, 255, 0.1);
+        }
+        .btn-submit {
+            background-color: #0046ff;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+        .btn-submit:hover {
+            background-color: #0035c2;
+            transform: translateY(-2px);
+        }
+        .info-box {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            height: 100%;
+        }
+        .footer { background: #f8f9fa; padding: 40px 0; font-size: 0.9rem; margin-top: 80px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">바른플러스</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                     <li class="nav-item"><a class="nav-link text-primary fw-bold" href="about.html">회사소개</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="business.html">사업분야</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="service.html">서비스</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="inquiry-corp.html">견적문의</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="inquiry-job.html">구직문의</a></li>
+                    <li class="nav-item"><a class="nav-link text-primary fw-bold" href="tel:010-8571-6471">전화연결</a>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
+    </nav>
+
+    <header class="page-header text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-2">Corporate Inquiry</h2>
+            <p class="text-muted">귀사의 성공적인 비즈니스를 위한 최적의 인재 매칭 솔루션을 제안합니다.</p>
+        </div>
+    </header>
+
+    <section class="container pb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="inquiry-card">
+                    <div class="row g-5">
+                        <div class="col-md-4">
+                            <div class="info-box">
+                                <h5 class="fw-bold mb-4">상담 안내</h5>
+                                <p class="small text-muted mb-4">문의를 남겨주시면 담당 매니저가 내용을 검토한 후 24시간 이내에 연락드립니다.</p>
+                                
+                                <div class="mb-3">
+                                    <small class="text-primary fw-bold d-block">빠른 전화 상담</small>
+                                    <span class="fw-bold">031-XXXX-XXXX</span>
+                                </div>
+                                <div class="mb-3">
+                                    <small class="text-primary fw-bold d-block">이메일 문의</small>
+                                    <span class="fw-bold">contact@barunplus.com</span>
+                                </div>
+                                <hr>
+                                <p class="small text-muted">주말 및 공휴일 접수 건은 평일 영업일 기준 순차적으로 답변드립니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <form action="https://formspree.io/f/본인의아이디" method="POST">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">회사명</label>
+                                        <input type="text" name="company" class="form-control" placeholder="회사명을 입력하세요" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">담당자 성함</label>
+                                        <input type="text" name="name" class="form-control" placeholder="성함을 입력하세요" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">연락처</label>
+                                        <input type="tel" name="phone" class="form-control" placeholder="010-0000-0000" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">이메일 주소</label>
+                                        <input type="email" name="email" class="form-control" placeholder="example@mail.com" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">관심 서비스 분야</label>
+                                        <select name="service" class="form-select" required>
+                                            <option value="" selected disabled>분야를 선택해주세요</option>
+                                            <option value="제조/생산">제조 / 생산</option>
+                                            <option value="물류/유통">물류 / 유통</option>
+                                            <option value="시설/미화">시설 / 미화</option>
+                                            <option value="인력매칭/알바">인력매칭 / 채용대행</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label">문의 내용</label>
+                                        <textarea name="message" class="form-control" rows="6" placeholder="필요 인원, 예상 기간, 현장 위치 등 상세 내용을 입력해 주시면 정확한 견적이 가능합니다." required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="privacy" required>
+                                            <label class="form-check-label small" for="privacy">
+                                                개인정보 수집 및 이용에 동의합니다. (필수)
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary btn-submit w-100 text-white">무료 견적 신청하기</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col-md-6 mb-3">
+                    <h5 class="fw-bold text-primary mb-3">바른플러스</h5>
+                    <p class="mb-1"><strong>본사:</strong> 경기도 평택시 ○○로 123, 4층</p>
+                    <p class="mb-1"><strong>지사:</strong> 충청남도 천안시 ○○로 456, 2층</p>
+                    <p class="mb-1"><strong>대표번호:</strong> 031-XXXX-XXXX | <strong>Email:</strong> contact@barunplus.com</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="mb-3">
+                        <a href="privacy.html" class="text-decoration-none text-muted me-3">개인정보처리방침</a>
+                        <a href="terms.html" class="text-decoration-none text-muted">이용약관</a>
+                    </div>
+                    <p class="text-muted small">Copyright © 2026 Barun Plus. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
