@@ -89,4 +89,11 @@ body {
     margin-bottom: 2rem;
     opacity: 0.9;
 }
-    
+
+/* 네이버 지도 꽉 차게 만들기 */
+.map-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+}
+
