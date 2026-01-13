@@ -1,0 +1,41 @@
+<section class="py-5 bg-light">
+    <div class="container" style="max-width: 700px;">
+        <h2 class="text-center fw-bold mb-4">기업 견적 문의</h2>
+        <div class="card p-4 shadow-sm">
+            <form action="https://formspree.io/f/mlggewpk" method="POST">
+                <div class="mb-3">
+                    <label class="form-label">회사명</label>
+                    <input type="text" name="company_name" class="form-control" required placeholder="회사명을 입력하세요">
+                </div>
+                <div class="mb-3 row">
+                    <div class="col">
+                        <label class="form-label">담당자명</label>
+                        <input type="text" name="name" class="form-control" required>
+                    </div>
+                    <div class="col">
+                        <label class="form-label">연락처</label>
+                        <input type="tel" name="phone" class="form-control" required placeholder="010-0000-0000">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">서비스 분야</label>
+                    <select name="service_type" class="form-select">
+                        <option value="제조/생산">제조/생산</option>
+                        <option value="물류/유통">물류/유통</option>
+                        <option value="시설관리">시설관리/청소</option>
+                        <option value="기타">기타</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">문의 내용</label>
+                    <textarea name="message" class="form-control" rows="5" required placeholder="필요 인원, 기간 등 상세 내용을 남겨주세요"></textarea>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="agree" required>
+                    <label class="form-check-label" for="agree">개인정보 수집 및 이용에 동의합니다.</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 btn-lg">문의하기 보내기</button>
+            </form>
+        </div>
+    </div>
+</section>
