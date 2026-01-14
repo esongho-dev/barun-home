@@ -114,23 +114,6 @@
 
 
 
-<script>
-    // 탭 클릭 시 지도가 깨지지 않도록 리사이즈 이벤트 발생
-    document.querySelectorAll('button[data-bs-toggle="pill"]').forEach(tab => {
-        tab.addEventListener('shown.bs.tab', () => {
-            window.dispatchEvent(new Event('resize'));
-        });
-    });
-</script>
-
-
-    <style>
-        .nav-pills .nav-link { color: #555; border: 1px solid #eee; text-align: left; }
-        .nav-pills .nav-link.active { background-color: #0046ff; color: white; border-color: #0046ff; }
-        .map-container iframe { width: 100%; height: 100%; border: 0; }
-    </style>
-
-
     <footer class="footer">
         <div class="container text-center">
             <p><strong>바른플러스</strong> <br>
@@ -145,17 +128,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
-    <script>
-    // 모든 탭 버튼을 찾습니다.
-    var tabTriggerEl = document.querySelectorAll('button[data-bs-toggle="pill"]');
-    
-    tabTriggerEl.forEach(function(tabEl) {
-        tabEl.addEventListener('shown.bs.tab', function (event) {
-            // 탭이 완전히 열린 후(shown), 윈도우 리사이즈 이벤트를 강제로 발생시킵니다.
-            // 카카오 맵은 화면 크기가 변하면 지도를 다시 그리는 속성이 있습니다.
-            window.dispatchEvent(new Event('resize'));
-        });
-    });
-</script>
+   
         
 </html>
