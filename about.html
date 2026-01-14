@@ -62,9 +62,10 @@
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="nav flex-column nav-pills shadow-sm bg-white p-3 rounded" id="v-pills-tab" role="tablist">
-                    <button class="nav-link active mb-2 py-3 fw-bold" id="tab-home" data-bs-toggle="pill" data-bs-target="#content-home" type="button" role="tab">
-                         📍 본사 (천안)
+                    <button class="nav-link active mb-2 py-3 fw-bold" data-bs-toggle="pill" data-bs-target=".multi-tab-home" type="button">
+                        📍 본사 (천안)
                     </button>
+
                     <button class="nav-link py-3 fw-bold" id="tab-branch" data-bs-toggle="pill" data-bs-target="#content-branch" type="button" role="tab">
                          📍 지사 (평택) 
                     </button>
@@ -94,7 +95,7 @@
 
             <div class="col-md-8">
                 <div class="tab-content">
-                    <div class="tab-pane fade show active" id="content-home" role="tabpanel">
+                    <div class="tab-pane fade show active" id="content-home-map" role="tabpanel">
                         <div class="map-container shadow-sm" style="border-radius: 15px; overflow: hidden;">
                             <div id="daumRoughmapContainer1768289634580" class="root_daum_roughmap root_daum_roughmap_landing"></div>
                             <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
@@ -108,7 +109,7 @@
                             </script>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="content-branch" role="tabpanel">
+                    <div class="tab-pane fade" id="content-branch-map" role="tabpanel">
                         <div class="map-container shadow-sm" style="border-radius: 15px; overflow: hidden;">
                             <div id="daumRoughmapContainer1768290775149" class="root_daum_roughmap root_daum_roughmap_landing"></div>
                             <script charset="UTF-8">
@@ -123,6 +124,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
