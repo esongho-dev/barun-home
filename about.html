@@ -55,79 +55,63 @@
         </div>
     </section>
 
-       <section class="py-5 bg-light">
+    <section class="py-5 bg-light">
     <div class="container">
         <h3 class="fw-bold mb-5 text-center">오시는 길</h3>
         
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="nav flex-column nav-pills shadow-sm bg-white p-3 rounded" id="v-pills-tab" role="tablist">
-                    <button class="nav-link active mb-2 py-3 fw-bold" id="tab-home" data-bs-toggle="pill" 
-                            data-bs-target="#content-home, #content-home-map" type="button" role="tab">
-                         📍 본사 (천안)
-                    </button>
-                    <button class="nav-link py-3 fw-bold" id="tab-branch" data-bs-toggle="pill" 
-                            data-bs-target="#content-branch, #content-branch-map" type="button" role="tab">
-                         📍 지사 (평택) 
-                    </button>
-                </div>
-
-                <div class="tab-content mt-4" id="v-pills-addressContent">
-                    <div class="tab-pane fade show active" id="content-home" role="tabpanel">
-                        <div class="p-4 bg-white rounded shadow-sm">
-                            <h5 class="fw-bold text-primary">천안 본사</h5>
-                            <p class="mb-1 text-muted small">주소</p>
-                            <p class="fw-bold mb-3">충남 천안시 서북구 성성동 1001, G1비즈캠퍼스 12층, 1222호</p>
-                            <p class="mb-1 text-muted small">문의전화</p>
-                            <p class="fw-bold">070-5158-0201</p>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="content-branch" role="tabpanel">
-                        <div class="p-4 bg-white rounded shadow-sm border-top border-primary border-4">
-                            <h5 class="fw-bold text-success">평택 지사</h5>
-                            <p class="mb-1 text-muted small">주소</p>
-                            <p class="fw-bold mb-3">경기도 평택시 송탄로 254, 3층</p>
-                            <p class="mb-1 text-muted small">문의전화</p>
-                            <p class="fw-bold">070-5158-0201</p>
-                        </div>
-                    </div>
+        <div class="row mb-5 pb-5 border-bottom">
+            <div class="col-md-4 mb-3">
+                <div class="p-4 bg-white rounded shadow-sm border-start border-primary border-5">
+                    <h4 class="fw-bold text-primary mb-3">📍 천안 본사</h4>
+                    <p class="mb-1 text-muted small">주소</p>
+                    <p class="fw-bold mb-3">충남 천안시 서북구 성성동 1001,<br>G1비즈캠퍼스 12층, 1222호</p>
+                    <p class="mb-1 text-muted small">문의전화</p>
+                    <p class="fw-bold text-dark">070-5158-0201</p>
                 </div>
             </div>
-
             <div class="col-md-8">
-                <div class="tab-content" id="v-pills-mapContent">
-                    <div class="tab-pane fade show active" id="content-home-map" role="tabpanel">
-                        <div class="map-container shadow-sm" style="border-radius: 15px; overflow: hidden; height: 450px;">
-                            <div id="daumRoughmapContainer1768289634580" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%;"></div>
-                            <script charset="UTF-8" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-                            <script charset="UTF-8">
-                                new daum.roughmap.Lander({
-                                    "timestamp" : "1768289634580",
-                                    "key" : "fxzsw2hc2f6",
-                                    "mapWidth" : "100%",
-                                    "mapHeight" : "450"
-                                }).render();
-                            </script>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="content-branch-map" role="tabpanel">
-                        <div class="map-container shadow-sm" style="border-radius: 15px; overflow: hidden; height: 450px;">
-                            <div id="daumRoughmapContainer1768290775149" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%;"></div>
-                            <script charset="UTF-8">
-                                new daum.roughmap.Lander({
-                                    "timestamp" : "1768290775149",
-                                    "key" : "fjiqcke4j4z",
-                                    "mapWidth" : "100%",
-                                    "mapHeight" : "450"
-                                }).render();
-                            </script>
-                        </div>
-                    </div>
+                <div class="map-container shadow-sm" style="border-radius: 15px; overflow: hidden; height: 400px;">
+                    <div id="daumRoughmapContainer1768289634580" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%;"></div>
+                    <script charset="UTF-8" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1768289634580",
+                            "key" : "fxzsw2hc2f6",
+                            "mapWidth" : "100%",
+                            "mapHeight" : "400"
+                        }).render();
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="p-4 bg-white rounded shadow-sm border-start border-success border-5">
+                    <h4 class="fw-bold text-success mb-3">📍 평택 지사</h4>
+                    <p class="mb-1 text-muted small">주소</p>
+                    <p class="fw-bold mb-3">경기도 평택시 송탄로 254, 3층</p>
+                    <p class="mb-1 text-muted small">문의전화</p>
+                    <p class="fw-bold text-dark">070-5158-0201</p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="map-container shadow-sm" style="border-radius: 15px; overflow: hidden; height: 400px;">
+                    <div id="daumRoughmapContainer1768290775149" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%;"></div>
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1768290775149",
+                            "key" : "fjiqcke4j4z",
+                            "mapWidth" : "100%",
+                            "mapHeight" : "400"
+                        }).render();
+                    </script>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 
 <script>
