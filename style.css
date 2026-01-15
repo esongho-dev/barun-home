@@ -122,7 +122,7 @@ body {
 .main-title-sub {
     color: #ffffff !important;      /* 흰색 */
     font-size: 1.2em;               /* 기존보다 약 20% 크게 */
-    font-family: 'Arial Black', sans-serif; /* 굵고 강조된 글씨체 */
+    /* font-family: 'Arial Black', sans-serif;  굵고 강조된 글씨체 */
     letter-spacing: 2px;            /* 글자 간격 넓게 해서 가독성 업 */
     display: inline-block;
     margin-bottom: 10px;
@@ -131,7 +131,7 @@ body {
 /* TOTAL HR PARTNER 전용 스타일 */
 .main-title-sub {
     color: #ffffff !important;           /* 무조건 흰색 */
-    font-size: 1.2em;                    /* 메인 제목(바른플러스)의 절반 크기로 시작해 조절 */
+    font-size: 0.7em;                    /* 메인 제목(바른플러스)의 절반 크기로 시작해 조절 */
     /* font-family: 'Arial Black', Gadget, sans-serif;  굵고 강조된 서체 */
     letter-spacing: 3px;                 /* 글자 사이 간격을 넓혀 고급스럽게 */
     /*text-transform: uppercase;            무조건 대문자로 */
