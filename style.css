@@ -139,3 +139,17 @@ body {
     margin-bottom: 5px;                  /* 바른플러스 글자와의 간격 */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* 배경이 밝아도 잘 보이게 그림자 살짝 */
 }
+
+/* 로고 이미지 스타일 */
+.navbar-brand img {
+    max-height: 50px; /* 네비게이션 바 높이에 맞춰 조절 (보통 40~50px 적당) */
+    display: block;
+    object-fit: contain; /* 이미지 비율 유지 */
+}
+
+/* 모바일 화면에서 로고 위치 미세 조정 */
+@media (max-width: 991px) {
+    .navbar-brand img {
+        max-height: 35px; /* 모바일에서는 조금 더 작게 설정 */
+    }
+}
