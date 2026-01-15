@@ -16,6 +16,17 @@ body {
     color: #0A246A  !important;
 }
 
+/* 네비게이션 메뉴 기본 색상 */
+.custom-nav {
+    color: #0A246A !important; /* 원하는 색상 코드 입력 */
+    transition: color 0.3s ease; /* 색상 변경 시 부드럽게 애니메이션 */
+}
+
+/* 마우스를 올렸을 때(Hover) 색상 */
+.custom-nav:hover {
+    color: #0046ff !important; /* 마우스 올렸을 때 강조될 색상 */
+}
+
 /* 3. 공통 섹션 헤더 (about, business, service 공통) */
 .page-header {
     background: #f0f4ff;
